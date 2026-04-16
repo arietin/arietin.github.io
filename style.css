@@ -18,7 +18,7 @@ body{
     font-family: "IBM Plex Sans", sans-serif;
     font-size: large;
     margin: 0 -10px 0 -10px;
-    --highlight-bg-color: salmon;
+    --highlight-bg-color: #ff9966;
     --highlight-txt-color: white;
 }
 
