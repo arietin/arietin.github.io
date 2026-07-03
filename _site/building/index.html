@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      How I Built This &middot; Hyde
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://localhost:4000/_site/public/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:4000/_site/public/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:4000/_site/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/_site/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="http://localhost:4000/_site/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-0d">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/_site/">
+          Hyde
+        </a>
+      </h1>
+      <p class="lead">A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/_site/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="http://localhost:4000/_site//about/">About</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item active" href="http://localhost:4000/_site//building/">How I Built This</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="https://github.com/poole/hyde/archive/v3.0.0.zip">Download</a>
+      <a class="sidebar-nav-item" href="https://github.com/poole/hyde">GitHub project</a>
+      <span class="sidebar-nav-item">Currently v3.0.0</span>
+    </nav>
+
+    <p>&copy; 2026. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">How I Built This</h1>
+  <h1 id="setting-up-my-site">Setting Up My Site</h1>
+
+<p>A step by step guide for setting up a bare-bones version of this site, as of 2026-07-01.</p>
+
+<h2 id="my-system">My System:</h2>
+<ul>
+  <li>OS: Windows 11</li>
+  <li>Text Editor: VSCode</li>
+  <li>Version Control: GitHub</li>
+  <li>Host: GitHub</li>
+</ul>
+
+<h2 id="downloads">Downloads:</h2>
+
+<h3 id="ruby-31-with-devkit-newer-versions-caused-compatibility-issues">Ruby 3.1 with DevKit (newer versions caused compatibility issues)</h3>
+
+<ol>
+  <li>Open PowerShell</li>
+  <li>Type in <code>winget search ruby</code></li>
+  <li>Copy the id corresponding to <code>Ruby 3.1 with MSYS2</code> (for me it was <code>RubyInstallerTeam.RubyWithDevKit.3.1</code>)</li>
+  <li>To download, type <code>winget install [the copied id from step 3]</code></li>
+</ol>
+
+<h3 id="jekyll-with-bundler">Jekyll (with Bundler)</h3>
+
+<ol>
+  <li>With Ruby installed, open Command Prompt</li>
+  <li>Type <code>gem install jekyll bundler</code></li>
+</ol>
+
+<h3 id="poole">Poole</h3>
+
+<ol>
+  <li>Download and extract the files from the <a href="https://github.com/poole/poole">Poole GitHub</a></li>
+</ol>
+
+<p><strong>NOTE:</strong> Extract these files to a temporary location, NOT that of your webpage</p>
+
+<h3 id="hyde">Hyde</h3>
+
+<ol>
+  <li>Download and extract the files from the <a href="https://github.com/poole/hyde">Hyde GitHub</a></li>
+</ol>
+
+<p><strong>NOTE:</strong> These files can be extracted directly to where you want to build your WebPage</p>
+
+<h2 id="setting-up-a-local-version">Setting Up a Local Version</h2>
+
+<h3 id="transfer-necessary-poole-files">Transfer Necessary Poole Files</h3>
+
+<ol>
+  <li>Copy <code>Gemfile</code> and <code>Gemfile.lock</code> from <code>poole-master</code> to the top-level hyde folder</li>
+  <li>Copy the contents <strong>from the line <code># Gems</code> onward</strong> (line 9 for me) of the <code>_config.yml</code> from <code>poole-master</code> to the <code>_config.yml</code> in the top-level hyde folder</li>
+</ol>
+
+<h3 id="make-necessary-edits">Make Necessary Edits</h3>
+
+<h4 id="to-the-_configyml-file">To the <code>_config.yml</code> File:</h4>
+
+<ol>
+  <li>Change the markdown parser: <code>markdown: redcarpet</code> → <code>markdown: kramdown</code></li>
+  <li>Set <code>url</code> to <code>"localhost:8000"</code> (under the “#Setup” section)</li>
+  <li>Set <code>baseurl</code> to <code>"/_site/"</code> (under the “#Setup” section)</li>
+  <li>Delete the line <code>relative_permalinks: true</code> (no longer supported)</li>
+</ol>
+
+<h4 id="to-_includesheadhtml">To <code>_includes/head.html</code>:</h4>
+<ol>
+  <li>Replace all instances of <code>/_site/</code> with <code>http://localhost:4000/_site/</code> (relative links seem to not work, so they need to be explicitly set)</li>
+</ol>
+
+<h4 id="to-_includessidebarhtml">To <code>_includes/sidebar.html</code>:</h4>
+<ol>
+  <li>Replace `` with <code>http://localhost:4000/_site/</code></li>
+</ol>
+
+<h3 id="run">Run</h3>
+
+<ol>
+  <li>Change directory to the topmost level of your hyde folder</li>
+  <li>Execute <code>bundle update</code></li>
+  <li>Execute <code>bundle exec jekyll serve</code></li>
+</ol>
+
+<h2 id="customize-it">Customize It</h2>
+
+<h3 id="jekyll-101-what-is-it-doing">Jekyll 101: What is it Doing?</h3>
+<ol>
+  <li>It takes all the non-excluded <code>.md</code> (markdown) files and creates a folder for each in the <code>_site</code> folder. The markdown is used to populate an html template determined by the markdown file’s header (e.g. with <code>layout: page</code> in the header, the <code>page.html</code> layout would be used). Templates are stored in the <code>_layouts</code> folder.</li>
+  <li>A similar process is executed for every markdown file in the <code>_posts</code> folder. The main difference, however, is that these are grouped into folders based on their titles, which are expected to begin with dates in a YYYY-MM-DD format, such as <code>1572-11-5-a-new-star.md</code> (month and date can be single digit numbers). These dates determine the order posts are shown in on the homepage.</li>
+  <li>Posts are loaded in, with the number per page set by the <code>paginate: </code> option in the <code>_config.yml</code> file.</li>
+</ol>
+
+<h3 id="changing-appearances">Changing Appearances</h3>
+
+<p>Change the color scheme by adding <code>class="theme-base-##"</code> to the body tag of the <code>_layouts/default.html</code> page. More details about which colors and numbers are available can be found on the <a href="https://github.com/poole/hyde#themes">hyde GitHub page</a>. Other aesthetic changes can be found there as well.</p>
+
+<p>Icons are stored in the <code>public</code> folder. The easiest way to maintain compatibility when swapping out images is to keep the filenames.</p>
+
+<p>Features of the sidebar are largely controlled by the <code>_config.yml</code> file, and the exact variables are shown in the <code>_includes/sidebar.html</code> file.</p>
+
+<h3 id="adding-pages">Adding Pages</h3>
+
+<p>Pages can be added to the sidebar by creating a new <code>.md</code> file in the top level of the directory. The filename can be any valid string, but the head of this file should be:</p>
+<pre><code>---
+layout: page
+title: [Your Title Here]
+---
+</code></pre>
+
+<p>Posts can be added to the site by creating a new <code>.md</code> file in the <code>_posts</code> directory. Each post filename should begin with a date, as <a href="#jekyll-101-what-is-it-doing">described above</a>.</p>
+
+<h2 id="host-it-on-github">Host it on GitHub</h2>
+
+</div>
+
+    </div>
+
+  </body>
+</html>
