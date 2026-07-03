@@ -72,8 +72,8 @@ safe: true
 # source: https://github.com/arietin/arietin.github.io # this is fundamentally incorrect
 incremental: false
 #highlighter: rouge # this is already defined above
-gist:
-  noscript: false
+#gist:
+#  noscript: false
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge 
