@@ -16,10 +16,6 @@ url:              "https://arietin.github.io"
 baseurl:          ""
 sourceprefix:     ""
 
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
-
 paginate:         2
 paginate_path:    "page:num"
 
@@ -35,7 +31,7 @@ github:
 # Gems
 plugins:
   - jekyll-gist
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-seo-tag
 
 # Optimize Jekyll

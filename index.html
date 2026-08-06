@@ -21,6 +21,17 @@ title: Home
 
 Paginator exists: {{ paginator.pages }}
 
+Paginator object exists:
+
+{% if paginator %}
+
+YES
+
+{% else %}
+
+NO
+{% endif %}
+
 <div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="page{{paginator.next_page}}">Older</a>
