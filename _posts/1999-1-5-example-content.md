@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Example content
-pagination: 
-  enabled: true
+#pagination: 
+#  enabled: true
 ---
 
 
