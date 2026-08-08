@@ -2,19 +2,23 @@
 
 # Dependencies
 markdown:         kramdown
-highlighter:      pygments
+highlighter:      rogue
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge 
 
 # Permalinks
 permalink:        pretty
 # relative_permalinks: true # Depracated: this breaks the site
 
 # Setup Variables
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+title:            'Ari Etin'
+tagline:          'Staying Curious'
+description:      'Welcome to my personal site! I share thoughts, updates, and nifty things I find. Oh, and also I host my CV here.'
 url:              "https://arietin.github.io"
 baseurl:          ""
 sourceprefix:     ""
+cvfile:           "2026-04-20_CV.pdf"
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
@@ -74,14 +78,9 @@ pagination:
   # Without file extension
   indexpage: 'index'
 
-# Custom vars
-version:          2.1.0
-
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/arietin/arietin.github.io
 
-
-# Poole Config
 
 # Gems
 plugins:
@@ -110,22 +109,15 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Mark Otto
-  url: https://twitter.com/mdo
-  email: markdotto@gmail.com
-
-# Custom vars
-version: 3.0.0
+  name: Ari Etin
+  url: arietin.github.io
+  email: arietin@alumni.unc.edu
 
 # Github
 
 lsi: false
 safe: true
-# source: https://github.com/arietin/arietin.github.io # this is fundamentally incorrect
 incremental: false
-highlighter: rouge # this is already defined above
+# highlighter: rouge # this is already defined above
 gist:
   noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge 
