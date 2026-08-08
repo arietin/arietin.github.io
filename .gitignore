@@ -3,6 +3,7 @@ _gh_pages
 _site
 .ruby-version
 dep
+_index.html
 
 # Numerous always-ignore extensions
 *.diff
