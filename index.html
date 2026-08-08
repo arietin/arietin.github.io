@@ -26,7 +26,7 @@ Page: {{paginator.page}}
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older</a>
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.url | replace: '//', '/' }}">Older</a>
   {% else %}
     <span class="pagination-item older">Older</span>
   {% endif %}
@@ -34,7 +34,7 @@ Page: {{paginator.page}}
     {% if paginator.page == 2 %}
       <a class="pagination-item newer" href="{{ site.url }}">Newer</a>
     {% else %}
-      <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer</a>
+      <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.url | replace: '//', '/' }}">Newer</a>
     {% endif %}
   {% else %}
     <span class="pagination-item newer">Newer</span>
