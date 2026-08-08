@@ -5,7 +5,7 @@ title: How I Built This
 
 # Setting Up My Site
 
-A step by step guide for setting up a bare-bones version of this site, as of 2026-08-08. To skip past the nitty-gritty and make a version for yourself, you can download a stripped down version of my site code here: [link goes here]().
+A step by step guide for setting up a bare-bones version of this site, as of 2026-08-08. To skip past the nitty-gritty and make a version for yourself, you can download a stripped down version of my site code at this repository: [Hyde Site Template](https://github.com/arietin/HydeSiteTemplate).
 
 ## My System:
 - OS: Windows 11
