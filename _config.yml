@@ -14,7 +14,7 @@ permalink:        pretty
 # Setup Variables
 title:            'Ari Etin'
 tagline:          'Staying Curious'
-description:      'Welcome to my personal site! I share thoughts, updates, and nifty things I find. Oh, and also I host my CV here.'
+description:      'Welcome to my personal site! I share thoughts, updates, and nifty things I find. Oh, and I also host my CV here.'
 url:              "https://arietin.github.io"
 baseurl:          ""
 sourceprefix:     ""
